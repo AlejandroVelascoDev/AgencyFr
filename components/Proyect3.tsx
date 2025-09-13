@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, useScroll, useTransform} from 'framer-motion'
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function Project3() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function About() {
     <section
       ref={sectionRef}
       id="about"
-      className="min-h-screen flex items-center justify-center bg-black rounded-[70px] sm:rounded-[50px] xs:rounded-[30px] relative overflow-hidden px-4 sm:px-6 md:px-10"
+      className="min-h-screen flex items-center justify-center bg-white rounded-[70px] sm:rounded-[50px] xs:rounded-[30px] relative overflow-hidden px-4 sm:px-6 md:px-10"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 max-w-6xl w-full z-10">
 

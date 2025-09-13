@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion, useScroll, useTransform} from 'framer-motion'
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export default function Project2() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
