@@ -12,7 +12,7 @@ export default function Project2() {
     if (sectionRef.current) {
       gsap.fromTo(
         sectionRef.current,
-        { opacity: 0, y: 50 },
+        { opacity: 1, y: 50 },
         {
           opacity: 1,
           y: 0,

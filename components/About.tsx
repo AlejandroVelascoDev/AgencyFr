@@ -12,9 +12,8 @@ export default function About() {
     if (sectionRef.current) {
       gsap.fromTo(
         sectionRef.current,
-        { opacity: 0, y: 50 },
+        { opacity: 1, y: 50 },
         {
-          opacity: 1,
           y: 0,
           duration: 1,
           scrollTrigger: {
@@ -42,21 +41,21 @@ export default function About() {
             Aiveo Website
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-full lg:max-w-md">
-            Category: <span className="text-white">Web Design</span>.  
+            Category: <span  className="text-white">Web Design</span>.  
             A project focused on creating sleek and functional interfaces that
             elevate the user experience.
           </p>
           <a
-            href="./works/aiveo-website"
+            href="../public/muckup.png"
             className="mt-4 sm:mt-6 inline-block bg-[#00d9ff] text-black font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-md hover:scale-105 hover:bg-[#00c2e6] transition-transform duration-200 text-sm sm:text-base"
           >
             View Project →
           </a>
         </div>
         <div className="flex justify-center items-center order-1 lg:order-2">
-          <div className="w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-96 bg-gray-800 rounded-xl sm:rounded-2xl shadow-lg overflow-hidden relative group">
+          <div className="w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-96 bg-black rounded-xl sm:rounded-2xl shadow-lg overflow-hidden relative group">
             <img
-              src="/works/aiveo-preview.png"
+               src="/muckup.png"
               alt="Aiveo Website Preview"
               className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
             />
