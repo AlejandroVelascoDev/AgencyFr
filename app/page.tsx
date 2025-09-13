@@ -33,12 +33,12 @@ export default function Page() {
       </div>
 
       {/* 🔹 QR fijo derecha */}
-      <div className="fixed top-0 right-0 z-50 flex justify-end bg-white px-7 py-7 mt-6 mr-12 rounded-[46px] shadow-md">
+      <div className="fixed top-0 right-0 z-50 flex justify-end bg-white px-4 py-4 mt-6 mr-12 rounded-[46px] shadow-md">
         <div className="bg-white rounded-2xl hover:scale-105 transition-transform duration-200">
           <img
-            src="/qr-code.png"
+            src="/qrPortfolio.png"
             alt="QR Code"
-            className="w-16 h-16"
+            className="w-20 h-20"
           />
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function Page() {
         <Hero />
       </section>
       <motion.section
-        className="h-screen  bg-black flex items-center justify-center z-20 relative rounded-[70px] mt-[-100px] pt-20"
+        className="h-screen  bg-white  z-20 relative rounded-[70px] mt-[-100px] pt-10 "
       >
         <About />
       </motion.section>

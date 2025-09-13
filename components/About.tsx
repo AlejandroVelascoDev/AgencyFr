@@ -4,53 +4,73 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
 export default function About() {
-const sectionRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (sectionRef.current) {
+      gsap.fromTo(
+        sectionRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
+  }, []);
 
-useEffect(() => {
-if (sectionRef.current) {
-  gsap.fromTo(
-  sectionRef.current,
-  { opacity: 0, y: 50 },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    scrollTrigger: {
-      trigger: sectionRef.current,
-      start: "top 80%",
-    },
-  }
-);
-}
-}, []);
+  return (
+    <section
+      ref={sectionRef}
+      id="about"
+      className="min-h-screen flex items-center justify-center bg-black rounded-[70px] relative overflow-hidden px-10"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl w-full z-10">
+        {/* Lado izquierdo (texto) */}
+        <div className="flex flex-col justify-center items-start text-left space-y-6">
+          <p className="text-[#00d9ff] uppercase tracking-widest text-sm font-semibold">
+            (WORK)
+          </p>
+          <h2 className="text-white text-4xl md:text-6xl font-bold leading-tight">
+            Aiveo Website
+          </h2>
+          <p className="text-gray-400 text-lg max-w-md">
+            Category: <span className="text-white">Web Design</span>.  
+            A project focused on creating sleek and functional interfaces that
+            elevate the user experience.
+          </p>
 
+          {/* Botón */}
+          <a
+            href="./works/aiveo-website"
+            className="mt-6 inline-block bg-[#00d9ff] text-black font-bold px-6 py-3 rounded-2xl shadow-md hover:scale-105 hover:bg-[#00c2e6] transition-transform duration-200"
+          >
+            View Project →
+          </a>
+        </div>
 
-return (
-
-  <section
-  ref={sectionRef}
-  id="about"
-  className="min-h-screen flex flex-col justify-center items-center bg-black rounded-[70px]"
- >
-  <div className="relative  rounded-2xl overflow-hidden shadow-lg ">
-    {/* Overlay */}
-    <div className="absolute  bg-black/50   flex flex-col justify-center items-center text-center ">
-      <p className="text-black text-sm mb-2 ">(WORK)</p>
-      <h2 className="text-white text-2xl font-bold mb-2 fade-in">Aiveo Website</h2>
-      <p className="text-gray-300 text-sm ">Category: Web Design</p>
-
-      {/* Botón */}
-      <a
-        href="./works/aiveo-website"
-        className="mt-4 inline-block bg-white text-black font-semibold px-4 py-2 rounded-lg hover:bg-gray-200 transition fade-in"
-      >
-        View Project →
-      </a>
-    </div>
-  </div>
-</section>
+        {/* Lado derecho (imagen o preview) */}
+        <div className="flex justify-center items-center">
+          <div className="w-full h-64 md:h-96 bg-gray-800 rounded-2xl shadow-lg overflow-hidden relative group">
+            {/* Imagen placeholder */}
+            <img
+              src="/works/aiveo-preview.png"
+              alt="Aiveo Website Preview"
+              className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
+            />
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+              <p className="text-white font-semibold text-lg">Preview</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
- }
+}
