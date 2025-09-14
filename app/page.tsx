@@ -1,10 +1,12 @@
 'use client'
 
-import { motion, useScroll, useSpring, useTransform } from "framer-motion"
+import { motion, useScroll, useSpring, useTransform, cancelFrame, frame } from "framer-motion"
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Lenis from "@studio-freight/lenis"
+
+import { ReactLenis } from 'lenis/react';
+import type { LenisRef } from 'lenis/react';
 import Hero from '@/components/Hero'
 import About from '@/components/About'
 import Project1 from '@/components/Project1'
@@ -23,13 +25,33 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Page() {
   const titleRef = useRef<HTMLHeadingElement>(null)
-   const { scrollYProgress } = useScroll();
-   const y = useTransform(scrollYProgress, [0, 1], ["100vh", "0vh"]);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ["100vh", "0vh"]);
+  const lenisRef = useRef<LenisRef>(null)
   
+    useEffect(() => {
+    function update(data: { timestamp: number }) {
+      const time = data.timestamp
+      lenisRef.current?.lenis?.raf(time)
+    }
+
+    frame.update(update, true)
+
+    return () => cancelFrame(update)
+  }, [])
+
+
+
 
   return (
     <>
-  <div className="fixed top-0 left-0 z-50 flex justify-start bg-white px-7 py-7 mt-8 ml-11 rounded-[46px] ">
+     <ReactLenis root options={{
+     autoRaf: false ,
+     duration: 1.2, 
+     easing: (t) => 1 - Math.pow(2, -10 * t),
+     lerp: 0.07, 
+     }} ref={lenisRef} >
+    <div className="fixed top-0 left-0 z-50 flex justify-start bg-white px-7 py-7 mt-8 ml-11 rounded-[46px] ">
         <button className="bg-white text-black font-semibold px-2 py-4 rounded-2xl transition-transform duration-200 hover:scale-105">
           HOME
         </button>
@@ -61,7 +83,9 @@ export default function Page() {
     <AboutUs />
   </section>
  </div>
-     
+
+    
+     </ReactLenis>
     </>
    
     // <Services />
