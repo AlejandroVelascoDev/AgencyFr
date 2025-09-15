@@ -2,29 +2,42 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion, useScroll, useTransform} from 'framer-motion'
+import { motion, useScroll, useTransform, useSpring} from 'framer-motion'
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Project3() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+export default function AboutUs() {
+  const Ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (sectionRef.current) {
+    if (Ref.current) {
       gsap.fromTo(
-        sectionRef.current,
+        Ref.current,
         { opacity: 0, y: 50 },
         {
           opacity: 1,
           y: 0,
           duration: 1,
           scrollTrigger: {
-            trigger: sectionRef.current,
+            trigger: Ref.current,
             start: "top 80%",
           },
         }
       );
     }
   }, []);
+
+  const { scrollYProgress } = useScroll({
+    target: Ref, 
+    offset: ["0.6 1", "1 1"], 
+  });
+
+  const yRaw = useTransform(scrollYProgress, [0, 1], [50, 0]) 
+  const scaleRaw = useTransform(scrollYProgress, [0, 1], [0.8, 1]) 
+  const opacityRaw = useTransform(scrollYProgress, [0, 1], [0, 1]) 
+
+    const y = useSpring(yRaw, { stiffness: 60, damping: 15 })
+  const scale = useSpring(scaleRaw, { stiffness: 60, damping: 15 })
+  const opacity = useSpring(opacityRaw, { stiffness: 60, damping: 15 })
 
   return (
      <section className="min-h-screen flex flex-col px-4 sm:px-6 md:px-10 lg:px-16 xl:px-28 py-8 sm:py-12 md:py-16 lg:py-20 xl:py-28 ">
@@ -54,14 +67,17 @@ export default function Project3() {
         </div>
           
       </div>
-      <div className="text-black  gap-3 sm:gap-4 pt-6  mt-10 flex flex-col justify-center items-start text-left space-y-4 sm:space-y-6 order-2 lg:order-1">
-           <p className="text-3xl  font-bold sm:text-lg md:text-xl lg:text-base xl:text-lg text-black leading-relaxed justify-end items-start">
-              At Agentic, we are a team of dedicated creatives driven by the desire to redefine online experiences.
-               Our journey began with a shared commitment to excellence in web design,
-                development, UI/UX, and product design.
-            </p>
-         
-          </div>
+     <motion.div
+      ref={Ref}
+      style={{ y, scale, opacity }}
+      className="text-black gap-3 sm:gap-4 pt-6 mt-10 flex flex-col justify-center items-start text-left space-y-4 sm:space-y-6 order-2 lg:order-1"
+    >
+      <p className="text-3xl font-bold sm:text-lg md:text-xl lg:text-base xl:text-lg text-black leading-relaxed justify-end items-start">
+        At Agentic, we are a team of dedicated creatives driven by the desire to
+        redefine online experiences. Our journey began with a shared commitment
+        to excellence in web design, development, UI/UX, and product design.
+      </p>
+    </motion.div>
     </section>
   );
 }
