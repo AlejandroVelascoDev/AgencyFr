@@ -46,7 +46,7 @@ export default function About() {
             elevate the user experience.
           </p>
           <a
-            href="../public/muckup.png"
+            href="#"
             className="mt-4 sm:mt-6 inline-block bg-[#00d9ff] text-black font-bold px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-md hover:scale-105 hover:bg-[#00c2e6] transition-transform duration-200 text-sm sm:text-base"
           >
             View Project →
