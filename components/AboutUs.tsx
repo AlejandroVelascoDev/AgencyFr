@@ -135,7 +135,7 @@ useEffect(() => {
             <motion.div
               className="flex flex-col items-start justify-end gap-2 pr-20"
               animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 1.5 }}
+              transition={{ repeat: Infinity, duration: 1 }}
             >
             </motion.div>
           </motion.div>
