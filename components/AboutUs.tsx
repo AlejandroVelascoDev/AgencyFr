@@ -119,7 +119,6 @@ useEffect(() => {
         > 
      
        <p className="text-[48px]  box font-semibold text-black leading-relaxed  max-w-4xl">
-       What sets us apart is not just our technical expertise but our unwavering dedication to bringing your digital vision to life.
       We believe in the power of thoughtful design and seamless functionality, 
       and our portfolio reflects our commitment to creating immersive and engaging digital solutions.
       </p>
