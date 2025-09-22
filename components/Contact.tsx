@@ -5,7 +5,10 @@ export default function Contact() {
         <p className="text-lg mb-8 text-center max-w-xl">
             We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.
             </p>
-          
+        
+          <p className="text-lg mb-8 text-center max-w-xl">
+            We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.
+            </p>
 
             </div>
   )
