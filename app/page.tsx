@@ -17,6 +17,7 @@ import AboutUs from '@/components/AboutUs'
 // import Contact from '@/components/Contact'
 import Navbar from '@/components/NavBar'
 import "./globals.css"
+import Contact from "@/components/Contact"
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -67,20 +68,23 @@ export default function Page() {
       </div>
 
   <div className="relative h-[400vh] p-6"> 
-  <section className="sticky top-0 h-screen z-0 ">
+  <section className="sticky top-0 h-screen z-1 ">
     <Hero />
   </section>
-  <section className="sticky top-0 h-screen z-0 pt-4 bg-white ">
+  <section className="sticky top-0 h-screen z-1 pt-4 bg-white ">
     <About />
   </section>
-  <section className="sticky top-0 h-screen z-0 pt-4">
+  <section className="sticky top-0 h-screen z-1 pt-4">
     <Project1 />
    </section>
-  <section className="sticky top-0 h-screen z-0 pt-4 ">
+  <section className="sticky top-0 h-screen z-1 pt-4 ">
     <Project2 />
   </section>
-   <section className="sticky top-0 h-screen z-0 pt-4 ">
+   <section className="sticky top-0 h-screen z-1 pt-4 ">
     <AboutUs />
+  </section>
+   <section className="sticky top-0 h-screen z-0 pt-4 ">
+    <Contact />
   </section>
  </div>
 
@@ -94,15 +98,4 @@ export default function Page() {
   )
 }
 
-function FeatureCard({ title, description, icon }: { title: string, description: string, icon: string }) {
-  return (
-    <motion.div
-      whileHover={{ y: -5 }}
-      className="bg-white  p-6 rounded-xl shadow-lg border border-gray-200 "
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-semibold text-black dark:text-white mb-2">{title}</h3>
-      <p className="text-black dark:text-gray-300">{description}</p>
-    </motion.div>
-  )
-}
+
