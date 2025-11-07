@@ -70,16 +70,7 @@ agentic-next-app/
 - [GSAP](https://greensock.com/gsap/) - Animation library
 - [ESLint](https://eslint.org/) - Code linting
 
-## Learn More
 
-To learn more about the technologies used in this project:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - learn about Tailwind CSS
-- [Framer Motion Documentation](https://www.framer.com/motion/) - learn about animations with Framer Motion
-- [GSAP Documentation](https://greensock.com/docs/) - learn about GSAP animations
-
-## Deployment
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
