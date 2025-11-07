@@ -13,39 +13,6 @@ Inspired in https://agentic.framer.website/
 - **ESLint** - Code linting and formatting
 - **Dark Mode** - Built-in dark/light theme support
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm, yarn, or pnpm
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd agentic-next-app
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build the application for production
-- `npm run start` - Start the production server
-- `npm run lint` - Run ESLint to check for code issues
 
 ## Project Structure
 
@@ -75,3 +42,7 @@ agentic-next-app/
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Preview of Agency : 
+<img width="1901" height="935" alt="Agentic" src="https://github.com/user-attachments/assets/ca0143b7-ca9f-4c40-9401-7fabb3b4b31a" />
+
