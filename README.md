@@ -1,6 +1,7 @@
 # Agentic Next.js App
 
 A modern Next.js 15 application built with TypeScript, Tailwind CSS, Framer Motion, and GSAP.
+Inspired in https://agentic.framer.website/
 
 ## Features
 
