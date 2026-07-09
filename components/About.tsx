@@ -38,12 +38,12 @@ export default function About() {
             (WORK)
           </p>
           <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-            Aiveo Website
+            Vitalo
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-full lg:max-w-md">
-            Category: <span  className="text-white">Web Design</span>.  
-            A project focused on creating sleek and functional interfaces that
-            elevate the user experience.
+            Category: <span className="text-white">Web Design</span>.  
+            An AI companion platform with a bold, conversational interface built
+            to feel effortless and human.
           </p>
           <a
             href="#"

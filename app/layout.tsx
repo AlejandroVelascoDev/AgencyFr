@@ -9,8 +9,9 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: 'Agentic Next App',
-  description: 'A Next.js application with Tailwind CSS, Framer Motion, and GSAP',
+  title: 'DALEXDEV — Elevating Digital Excellence',
+  description:
+    'DALEXDEV is a creative studio specializing in web design, development, UI/UX, and product design. We craft immersive digital experiences that make brands stand out.',
 }
 
 

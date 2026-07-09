@@ -39,12 +39,12 @@ export default function Project2() {
             (WORK)
           </p>
           <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-            Aiveo Website
+            Flowpath
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-full lg:max-w-md">
-            Category: <span className="text-white">Web Design</span>.  
-            A project focused on creating sleek and functional interfaces that
-            elevate the user experience.
+            Category: <span className="text-white">Product Design</span>.  
+            An AI automation product where multi-step agents ship work faster,
+            wrapped in a focused dashboard.
           </p>
           <a
             href="#"
@@ -56,8 +56,8 @@ export default function Project2() {
         <div className="flex justify-center items-center order-1 lg:order-2">
           <div className="w-full h-48 sm:h-56 md:h-64 lg:h-80 xl:h-96 bg-gray-800 rounded-xl sm:rounded-2xl shadow-lg overflow-hidden relative group">
             <img
-              src="/works/aiveo-preview.png"
-              alt="Aiveo Website Preview"
+              src="/works/flowpath-preview.png"
+              alt="Flowpath product preview"
               className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
             />
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">

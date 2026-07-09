@@ -16,11 +16,7 @@ export default function Hero() {
               <div className="relative group w-full cursor-pointer overflow-hidden">
                 <span className="absolute inset-0 bg-[#00bfff] scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-300 ease-out"></span>
                 <motion.span
-                  whileHover={{ 
-                    scale: [1, 1.05, 1.15, 1.23][Math.min(3, Math.floor(window.innerWidth / 400))], 
-                    x: [10, 15, 20, 30][Math.min(3, Math.floor(window.innerWidth / 400))], 
-                    y: [0, -3, -6, -10][Math.min(3, Math.floor(window.innerWidth / 400))] 
-                  }}
+                  whileHover={{ scale: 1.15, x: 24, y: -6 }}
                   whileTap={{ scale: 1.05 }}
                   className="relative z-10 font-sans font-bold text-[clamp(40px,12vw,110px)] leading-[0.8em] 
                              text-black group-hover:text-white transition-colors duration-500 

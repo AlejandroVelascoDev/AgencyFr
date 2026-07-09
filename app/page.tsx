@@ -12,9 +12,7 @@ import About from '@/components/About'
 import Project1 from '@/components/Project1'
 import Project2 from '@/components/Project2'
 import AboutUs from '@/components/AboutUs'
-// import Services from '@/components/Services'
-// import Portfolio from '@/components/Portfolio'
-// import Contact from '@/components/Contact'
+import Services from '@/components/Services'
 import Navbar from '@/components/NavBar'
 import "./globals.css"
 import Contact from "@/components/Contact"
@@ -67,7 +65,7 @@ export default function Page() {
         </div>
       </div>
 
-  <div className="relative h-[400vh] p-6"> 
+  <div className="relative h-[700vh] p-6"> 
   <section className="sticky top-0 h-screen z-1 ">
     <Hero />
   </section>
@@ -81,9 +79,12 @@ export default function Page() {
     <Project2 />
   </section>
    <section className="sticky top-0 h-screen z-1 pt-4 ">
+    <Services />
+  </section>
+   <section className="sticky top-0 h-screen z-1 pt-4 ">
     <AboutUs />
   </section>
-   <section className="sticky top-0 h-screen z-0 pt-4 ">
+   <section className="sticky top-0 h-screen z-10 pt-4 ">
     <Contact />
   </section>
  </div>
