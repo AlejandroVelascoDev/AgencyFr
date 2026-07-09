@@ -39,12 +39,12 @@ export default function Project1() {
             (WORK)
           </p>
           <h2 className="text-gray-900 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-            Aiveo Website
+            Artikle
           </h2>
           <p className="text-gray-700 text-base sm:text-lg max-w-full lg:max-w-md">
-            Category: <span className="text-blue-700 font-medium">Web Design</span>.  
-            A project focused on creating sleek and functional interfaces that
-            elevate the user experience.
+            Category: <span className="text-[#00b3d9] font-medium">Editorial Design</span>.  
+            A modern news and analysis platform with a clean, readable layout
+            that puts stories first.
           </p>
           <a
             href="#"
