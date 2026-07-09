@@ -74,12 +74,10 @@ export default function Contact() {
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} DALEXDEV. All rights reserved.
           </p>
-          <p className="text-gray-400 text-sm">
-            Elevating Digital Excellence.
-          </p>
+          <p className="text-gray-400 text-sm">Elevating Digital Excellence.</p>
         </div>
-        <div className="mt-6 leading-[0.8] text-[#00d9ff] font-[900] text-[clamp(60px,17vw,320px)] text-center select-none">
-          DALEXDEV®
+        <div className="mt-6 leading-[0.8] text-[#00d9ff] font-[900] text-[clamp(60px,14vw,320px)] text-center select-none">
+          DALEXDEV
         </div>
       </div>
     </footer>

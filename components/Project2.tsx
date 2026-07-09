@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion, useScroll, useTransform} from 'framer-motion'
+import { motion, useScroll, useTransform } from "framer-motion";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Project2() {
@@ -21,7 +21,7 @@ export default function Project2() {
             trigger: sectionRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
     }
   }, []);
@@ -30,10 +30,9 @@ export default function Project2() {
     <section
       ref={sectionRef}
       id="about"
-      className="min-h-screen flex items-center justify-center bg-black rounded-[70px] sm:rounded-[50px] xs:rounded-[30px] relative overflow-hidden px-4 sm:px-6 md:px-10"
+      className="min-h-screen flex items-center justify-center bg-black rounded-[71px] sm:rounded-[50px] xs:rounded-[30px] relative overflow-hidden px-4 sm:px-6 md:px-10"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 max-w-6xl w-full z-10">
-
         <div className="flex flex-col justify-center items-start text-left space-y-4 sm:space-y-6 order-2 lg:order-1">
           <p className="text-[#00d9ff] uppercase tracking-widest text-xs sm:text-sm font-semibold">
             (WORK)
@@ -42,9 +41,9 @@ export default function Project2() {
             Flowpath
           </h2>
           <p className="text-gray-400 text-base sm:text-lg max-w-full lg:max-w-md">
-            Category: <span className="text-white">Product Design</span>.  
-            An AI automation product where multi-step agents ship work faster,
-            wrapped in a focused dashboard.
+            Category: <span className="text-white">Product Design</span>. An AI
+            automation product where multi-step agents ship work faster, wrapped
+            in a focused dashboard.
           </p>
           <a
             href="#"
@@ -61,7 +60,9 @@ export default function Project2() {
               className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
             />
             <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
-              <p className="text-white font-semibold text-base sm:text-lg">Preview</p>
+              <p className="text-white font-semibold text-base sm:text-lg">
+                Preview
+              </p>
             </div>
           </div>
         </div>
